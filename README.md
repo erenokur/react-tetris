@@ -118,9 +118,3 @@ Adjust paths according to the actual repository contents.
 ## License
 
 Specify a license for your project (e.g., MIT). If not set, add a LICENSE file in the project root.
-
-----
-If you want, I can:
-- inspect package.json and adjust the README scripts to match actual scripts,
-- add a short development guide for implementing new pieces or rules,
-- or create a CONTRIBUTING.md and LICENSE file.
