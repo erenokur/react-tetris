@@ -1,16 +1,126 @@
-# React + Vite
+# React Tetris
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Tetris clone implemented with React. This repository contains the source code, assets, and scripts needed to run, build, and test the application locally.
 
-Currently, two official plugins are available:
+## Definition / Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React Tetris is a small demonstration project intended to showcase:
+- basic game loop and state management in React
+- keyboard input handling
+- rendering and layout of a grid-based game
+- simple scoring and level progression logic
 
-## React Compiler
+Use it for learning, experimentation, or as a starting point for more advanced browser games.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prerequisites
 
-## Expanding the ESLint configuration
+Make sure you have the following installed on your machine:
+- Node.js (14.x or newer recommended)
+- npm (comes with Node) or Yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+On Linux you can check versions with:
+- node --version
+- npm --version
+(or yarn --version if you prefer Yarn)
+
+## Install
+
+From the project root (/root/repos/react-tetris):
+
+1. Install dependencies:
+   - npm:
+     npm install
+   - or Yarn:
+     yarn install
+
+## How to run (development)
+
+Start the development server with hot reload:
+
+- npm:
+  npm start
+- or Yarn:
+  yarn start
+
+The dev server will typically open http://localhost:3000 (or print the correct URL). Open that URL in your browser to play.
+
+## Build (production)
+
+Build a production bundle:
+
+- npm:
+  npm run build
+- or Yarn:
+  yarn build
+
+The optimized build will be created in the `build` (or `dist`) directory depending on your setup. Serve the static files with any static server (for example, serve, nginx, or a simple Node static server).
+
+## Test
+
+If the project includes tests, run them with:
+
+- npm:
+  npm test
+- or Yarn:
+  yarn test
+
+If there are no test scripts configured, this command may do nothing or exit with an error.
+
+## Linting and Formatting
+
+If linting and formatting are configured, run:
+
+- npm:
+  npm run lint
+  npm run format
+- or Yarn:
+  yarn lint
+  yarn format
+
+Adjust commands according to the project's package.json scripts.
+
+## How to play
+
+- Use the arrow keys to move and rotate pieces:
+  - Left / Right: move piece horizontally
+  - Up / Space: rotate (or as implemented)
+  - Down: soft drop
+  - Drop / Hard Drop: usually space or another key (see in-game controls)
+- Complete horizontal lines to score points.
+- Game speed increases as you clear lines/levels.
+
+Controls may vary; check the in-game help or control constants in the source if available.
+
+## Project structure (typical)
+
+- src/ — application source code (React components, game logic)
+- public/ — static assets and HTML entry
+- package.json — scripts and dependencies
+- README.md — this file
+
+Adjust paths according to the actual repository contents.
+
+## Troubleshooting
+
+- If the dev server fails to start, check for:
+  - missing dependencies: run npm install
+  - port conflicts: change PORT env variable or free the port
+  - errors shown in the terminal or browser console
+
+- If the build fails, read the error output and install any missing peer dependencies.
+
+## Contributing
+
+- Fork the repo, create a feature branch, and open a pull request.
+- Keep changes focused and provide a short description of the change.
+- Add tests for new game logic where applicable.
+
+## License
+
+Specify a license for your project (e.g., MIT). If not set, add a LICENSE file in the project root.
+
+----
+If you want, I can:
+- inspect package.json and adjust the README scripts to match actual scripts,
+- add a short development guide for implementing new pieces or rules,
+- or create a CONTRIBUTING.md and LICENSE file.
